@@ -1,6 +1,9 @@
 package at.klu.se2einzelaufgabe;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void onSendClick(View view) {
+        EditText field = findViewById(R.id.editMatrikelnummer);
+        String matr = field.getText().toString();
+        TextView output = findViewById(R.id.txtOutput);
 
-
-
+    }
 }
