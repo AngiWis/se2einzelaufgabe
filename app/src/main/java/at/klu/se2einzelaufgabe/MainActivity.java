@@ -63,6 +63,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void onCalcClick(View view) {
+        EditText field = findViewById(R.id.editMatrikelnummer);
+        String matr = field.getText().toString();
+        TextView output = findViewById(R.id.txtCalcOutput);
+        String result = checkPairs(matr);
+        output.setText(result);
+    }
+    private static String checkPairs(String matr) {
+        char[] digits = matr.toCharArray();
+        int[] nums = new int[digits.length];
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = digits[i] - '0';
+        }
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (ggt(nums[i], nums[j]) > 1) {
+                    sb.append(i + ", " + j + "\n");
+                }
+            }
+        }
+        return sb.toString();
+    }
+    private static int ggt(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
+        return ggt(b, a % b);
 
+    }
 
 }
