@@ -70,6 +70,22 @@
         tools:layout_editor_absoluteX="205dp"
         tools:layout_editor_absoluteY="400dp" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Ergebnis"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <TextView
+            android:id="@+id/txtCalcOutput"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Berechnen drücken"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="400dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
